@@ -9,7 +9,7 @@ const About = () => {
   async function fetchProduct() {
     try {
       const res = await apiClient.get(`products/${id}`);
-      setProduct(res.data);
+      setProduct(res.data.data);
     } catch (error) {
       console.log(error);
     }
